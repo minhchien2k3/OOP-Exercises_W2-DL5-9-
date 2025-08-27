@@ -1,6 +1,6 @@
-# 🚚 Vehicle Management System (OOP in C++)
+# 🚚 Vehicle Management System (OOP in C++) AND TESTCASE
 
-## 📌 Introduction
+## 1 Introduction
 This project demonstrates how to apply **Object-Oriented Programming (OOP)** principles in C++ to manage a transportation company’s vehicles.  
 The system allows users to:
 - Add **Cars, Trucks, and Motorcycles**.
@@ -126,5 +126,143 @@ While building this project, I learned how to break down real-world requirements
 This project showed how OOP makes the system **flexible, reusable, and easier to extend**. For example, adding a new vehicle type (like Bus) requires minimal changes because the design already supports polymorphism.
 
 ---
+# 2 TESTCASE
+Hiểu rồi 👍 mình sẽ viết lại phần **Test Cases** ngắn gọn, dễ hiểu như kiểu "bấm gì – thấy gì" cho bạn đưa vào README.
 
-#
+---
+
+
+### Test 1 – Car (xe hơi bình thường)
+
+* **Bạn nhập:**
+
+```
+1        (chọn Car)
+51A-11111
+200
+Gasoline
+2020
+5
+An
+0        (exit)
+```
+
+* **Chương trình in ra:**
+
+```
+Car 51A-11111 is accelerating to 200 km/h.
+--- Vehicle Info ---
+Type: Car
+License Plate: 51A-11111
+Max Speed: 200 km/h
+Fuel Type: Gasoline
+Year: 2020
+Seats: 5
+Driver: An
+```
+
+---
+
+### Test 2 – Truck (xe tải, tốc độ = 0 – edge case)
+
+* **Bạn nhập:**
+
+```
+2        (chọn Truck)
+43C-22222
+0
+Diesel
+2019
+15
+Binh
+0
+```
+
+* **Chương trình in ra:**
+
+```
+Truck 43C-22222 is accelerating to 0 km/h.
+--- Vehicle Info ---
+Type: Truck
+License Plate: 43C-22222
+Max Speed: 0 km/h
+Fuel Type: Diesel
+Year: 2019
+Capacity: 15 tons
+Driver: Binh
+```
+
+---
+
+### Test 3 – Motorcycle (xe máy đời cũ)
+
+* **Bạn nhập:**
+
+```
+3        (chọn Motorcycle)
+59X-99999
+180
+Gasoline
+1990
+150
+Cuong
+0
+```
+
+* **Chương trình in ra:**
+
+```
+Motorcycle 59X-99999 is accelerating to 180 km/h.
+--- Vehicle Info ---
+Type: Motorcycle
+License Plate: 59X-99999
+Max Speed: 180 km/h
+Fuel Type: Gasoline
+Year: 1990
+Engine Capacity: 150 cc
+Driver: Cuong
+```
+
+---
+
+### Test 4 – Nhập nhiều xe liên tiếp
+
+* **Bạn nhập:**
+
+```
+1
+30A-11111
+150
+Gasoline
+2018
+4
+Hoa
+2
+43C-55555
+120
+Diesel
+2021
+20
+Khanh
+3
+60B-77777
+90
+Gasoline
+2022
+125
+Nam
+0
+```
+
+* **Chương trình in ra:**
+
+```
+Car 30A-11111 is accelerating to 150 km/h.
+Truck 43C-55555 is accelerating to 120 km/h.
+Motorcycle 60B-77777 is accelerating to 90 km/h.
+
+--- Vehicle Info ---
+Type: Car ...
+Type: Truck ...
+Type: Motorcycle ...
+```
